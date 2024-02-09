@@ -1,0 +1,54 @@
+/* 去除边框 */
+table {
+    border-collapse: collapse;
+    border: none;
+}
+
+#mode-toggle {
+    position: fixed;
+    background-color: #333;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 999;
+}
+
+/* 切换按钮图标 */
+#mode-toggle .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode table {
+    background-color: #333;
+    color: #fff;
+}
+
+body.light-mode #mode-toggle {
+    background-color: #333;
+}
+
+body.dark-mode #mode-toggle {
+    background-color: #fff;
+}
+
+body.dark-mode #mode-toggle .sun-icon {
+    display: none;
+}
+
+body.light-mode #mode-toggle .moon-icon {
+    display: none;
+}
